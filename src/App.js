@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello anh ThongD, yah!</h1>
+      <h3>This is my first line of codes in this project</h3>
     </div>
   );
 }
