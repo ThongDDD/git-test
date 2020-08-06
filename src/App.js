@@ -23,7 +23,7 @@ function App() {
         <tbody>
           {people.map(function (person) {
             return (
-              <tr>
+              <tr key={person.id}>
                 <td>{person.id}</td>
                 <td>{person.name}</td>
                 <td>{person.age}</td>
