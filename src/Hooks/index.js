@@ -3,17 +3,14 @@ import Child from './Child'
 
 function Hooks() {
   const [str, serStr] = useState('')
-  
-  useEffect(() => {
-    console.log('hooks parent - useEffect')
-  }, [])
+  const [str1, setStr1] = useState('')
     
   useEffect(() => {
-    console.log('hooks parent - useEffect - updated', str)
+    console.log('hooks parent - useEffect', str)
   }, [str])
 
   const handleChangeState = () => {
-    serStr(Math.random())
+    setStr1(Math.random())
   }
 
   return (
@@ -22,7 +19,7 @@ function Hooks() {
       <button className="btn btn-success" onClick={handleChangeState}>
         Change state
       </button>
-      <Child str={str} />
+      <Child str={str1} />
     </div>
   )
 }

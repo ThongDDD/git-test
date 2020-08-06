@@ -14,8 +14,10 @@ class Class extends Component {
     console.log('class parent - componentDidMount')
   }
 
-  componentDidUpdate() {
-    console.log('class parent - componentDidUpdate')
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.str !== this.state.str) {
+      console.log('class parent - componentDidUpdate')
+    }
   }
 
   handleChangeState() {
