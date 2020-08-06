@@ -13,13 +13,24 @@ function App() {
       <h3>This is my first line of codes in this project</h3>
       <table>
         <thead>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Job</th>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Job</th>
+          </tr>
         </thead>
         <tbody>
-          
+          {people.map(function (person) {
+            return (
+              <tr>
+                <td>{person.id}</td>
+                <td>{person.name}</td>
+                <td>{person.age}</td>
+                <td>{person.job}</td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>
